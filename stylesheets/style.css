@@ -2,6 +2,8 @@
     font-family:"Courier New", Courier, monospace;
     font-weight: 100;
     margin: 0;
+    /* cursor: grabbing; */
+    cursor: url(../images/cursor.png), auto;
 }
 body,html{
     height: 100%;
@@ -9,20 +11,21 @@ body,html{
     color: #000;
 }
 #header-marquee{
+    display: flex;
+    align-items: center;
     letter-spacing: .3em;
     text-transform: lowercase;
-    font-size: 3em;;
+    font-size: 1em;
+    height: 3em;
     overflow: hidden;
     position: fixed;
     top: 0;
     margin-bottom:25px; 
     white-space: nowrap;
-    background-color: #505050;
-    animation: marquee 17s linear infinite,neon2 3s linear infinite;/*
-    animation-duration: 4s;
-    animation-iteration-count: infinite; */
-    /* animation: neon2 3s linear infinite; */
-    color: 000;
+    background-color: #fff;
+    border-bottom: 1px solid black;
+    animation: marquee 10s linear infinite,neon2 3s linear infinite;
+    color: #000;
 }
 
 .content{
@@ -30,7 +33,7 @@ body,html{
 }
 @keyframes marquee {
     0%   { text-indent: 0 }
-    100% { text-indent: -485px }
+    100% { text-indent: -1000px }
 }
 
 @keyframes neon2 {
@@ -38,7 +41,7 @@ body,html{
     }
 
     50% {
-      text-shadow: 0 0 5px #555, 0 0 10px #555, 0 0 15px #555, 0 0 20px #000, 0 0 35px #000, 0 0 40px #000, 0 0 50px #000, 0 0 75px #000;
+      text-shadow: 0 0 5px #303030, 0 0 10px #303030, 0 0 15px #303030, 0 0 20px #fff, 0 0 35px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 75px #fff;
     }
     100% {
       }
